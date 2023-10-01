@@ -1,0 +1,247 @@
+/* body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+} */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid silver;
+  background-color: white;
+  height: 70px;
+}
+
+button.new-obituary {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border-color: white;
+  height: 70px;
+  font-size: 18px;
+  color: black;
+}
+
+button.new-obituary:hover{
+  background-color: gray;
+  border-color: white;
+  color: white;
+}
+
+h3.obituary-verification{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: lightgray;
+  margin-top: 5%;
+}
+
+.translucent-page{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.894);
+  font-family: "Times New Roman", Times, serif;
+}
+
+button.x{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: grey;
+}
+
+.file-label:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.translucent-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.translucent-page form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.translucent-page form p {
+  margin: 10px 0;
+}
+
+.translucent-page form .date-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+
+.translucent-page form .date-inputs input {
+  margin-right: 10px;
+  border: none;
+
+}
+
+@media (max-width: 768px) {
+  .translucent-page form .date-inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .translucent-page form .date-inputs input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 48%;
+  }
+}
+
+.submit{
+  margin-top: 25px;
+  height: 50px;
+  width: 350px;
+  background-color: rgb(95, 95, 225);
+  border: none;
+  font-size: 20px;
+}
+.submit:hover {
+  cursor: pointer;
+  color: white
+}
+
+.name{
+  margin-top: 25px;
+  height: 30px;
+  width: 350px;
+}
+
+.obituary-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.obituary-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.obituary {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+  min-height: 250px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 23%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .obituary-container {
+    max-width: 750px;
+    flex-wrap: wrap;
+  }
+  .obituary-row {
+    flex-wrap: wrap;
+    width: 750px;
+  }
+  .obituary {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .obituary-container {
+    max-width: 250px;
+  }
+  .obituary {
+    width: 25%;
+  }
+}
+
+
+.dead-images {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 10px;
+  filter: grayscale();
+}
+
+.names {
+  margin: 0;
+}
+
+.dates {
+  margin: 5px 0;
+  font-size: x-small;
+}
+
+.descriptions {
+  margin: 25px 0;
+  max-height: 200px; /* Set a max-height for the description */
+  overflow-y: auto; /* Add a scrollbar if the content overflows */
+  font-family: "Lavanderia", "Sunday", "Brush Script MT";
+  font-size: 25px;
+}
+
+.name-date-container {
+  background-color: rgb(211, 242, 253);
+  width: 100%;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
